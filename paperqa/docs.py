@@ -24,7 +24,7 @@ from langchain.cache import SQLiteCache
 import langchain
 from datetime import datetime
 
-CACHE_PATH = Path.home() / ".paperqa" / "llm_cache.db"
+CACHE_PATH = Path("/tmp/.paperqa/llm_cache.db")
 os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
 langchain.llm_cache = SQLiteCache(CACHE_PATH)
 
